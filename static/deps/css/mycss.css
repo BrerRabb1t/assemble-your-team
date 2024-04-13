@@ -1,0 +1,61 @@
+/* @import url('https://fonts.googleapis.com/css?family=Michroma&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap');
+
+body {
+    font-family: "M PLUS 1 Code", monospace;
+    background: linear-gradient(270deg, #079913 0%, #810e9e 100%);
+    font-size: larger;
+}
+
+p {
+    color: rgb(229, 127, 255);
+}
+
+.navbar {
+    background-color: #0a0;
+}
+
+.nav-link {
+    color: rgb(134, 26, 184);
+}
+
+.navbar-nav .nav-link.active {
+    color: rgb(41, 39, 39);
+}
+
+.navbar-brand img {
+    width: 40px;
+}
+
+.navbar-toggler {
+    background-color: rgb(112, 112, 112);
+}
+
+
+.card {
+    background: linear-gradient(270deg, #079913 0%, #810e9e 100%);
+    color: aquamarine;
+}
+
+.card a {
+    text-decoration: none;
+    color: aquamarine;
+}
+
+.slide-text,
+.footer-text {
+    color: rgb(134, 26, 184);
+    margin: auto auto;
+}
+
+footer {
+    background: linear-gradient(160deg, #079913 0%, #810e9e 100%);
+
+}
+
+.media-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

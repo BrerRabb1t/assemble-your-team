@@ -1,0 +1,38 @@
+[
+    {
+        "model": "main.products",
+        "pk": 1,
+        "fields": {
+            "name": "Bill Gates",
+            "slug": "bill-gates",
+            "description": "Not a young but very ambitious developer",
+            "image": "goods_images/bill_2c9Sp9G.jpg",
+            "price": "1000000",
+            "ability": "Will help you create a monopoly, knows how to terrorize competitors and pay off lawsuits"
+        }
+    },
+    {
+        "model": "main.products",
+        "pk": 2,
+        "fields": {
+            "name": "Average Senior",
+            "slug": "average-senior",
+            "description": "Nothing special, just an ordinary senior developer",
+            "image": "goods_images/sen_WBecOu6.jpg",
+            "price": "6000",
+            "ability": "He knows a lot, but pretends that he knows nothing just to do less"
+        }
+    },
+    {
+        "model": "main.products",
+        "pk": 3,
+        "fields": {
+            "name": "Poor Junior",
+            "slug": "poor-junior",
+            "description": "Unemployed physics graduate willing to work for food",
+            "image": "goods_images/ja_7eqlHTd.jpg",
+            "price": "49",
+            "ability": "Can't do anything but tries very hard"
+        }
+    }
+]
