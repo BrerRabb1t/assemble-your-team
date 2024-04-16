@@ -76,10 +76,14 @@
       </div>
       <div class="container-fluid mt-4">
         <div class="row">
-          <div class="col-lg-12 col-md-12 text-center mt-4 border border-3 border-warning">
-            
-            <p>50$ REGISTRATION GIFT</p>
-          </div>
+          {% if not user.is_authenticated %}
+            <div class="col-lg-12 col-md-12 text-center mt-4 border border-3 border-warning">
+              <a href="{% url "user:registration" %}" >
+                <p>50$ REGISTRATION GIFT</p>
+              </a>
+              
+            </div>
+          {% endif %}
         </div>
       </div>
       <div class="row">

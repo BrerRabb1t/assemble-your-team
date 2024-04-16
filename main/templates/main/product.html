@@ -43,7 +43,9 @@
                         <p class="card-text">Price: <strong>{{ product.price }} $</strong></p>
                         <h5 class="card-title">{{ product.name }}</h5>
                         <p class="card-text">{{ product.description }}</p>
-                        <a href="#" class="btn btn-dark add-to-cart">Call for an interview</a>
+                        <a href="{% url "user:cart" product.id %}" class="btn btn-dark add-to-cart">
+                            Call for an interview
+                        </a>
                     </div>
                 </div>
             </div>

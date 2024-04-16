@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{% static "deps/favicon_io/favicon-32x32.png"%}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static "deps/favicon_io/favicon-16x16.png"%}">
     <link rel="manifest" href="{% static "deps/favicon/site.webmanifest"%}">
-    <title>AYoT</title>
+    <title>{{ title }}</title>
 </head>
 <body>
     <header>
@@ -26,15 +26,18 @@
                   <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="{% url "main:index" %}">Assemble Your Team</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="pricing.html">price</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="login.html">Login</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="profile.html">profile</a>
-                  </li>
+                  {% if not user.is_authenticated %}
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url "user:login" %}">LogIn</a>
+                    </li>
+                  {% else %}
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url "user:profile" %}">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url "user:logout" %}">Logout</a>
+                    </li>
+                  {% endif %}
                   
                   
                 </ul>
@@ -44,6 +47,7 @@
     </header>
 
     <section>
+      {% include "includes/notifications.html" %}
         {% block content %}
         {% endblock content %}
       </section>
@@ -64,7 +68,8 @@
       </div>
     </footer>
     
-
+    <script src="{% static "deps/js/jquery/jquery-3.7.0.min.js" %}"></script>
+    <script src="{% static "deps/js/jquery-events.js" %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

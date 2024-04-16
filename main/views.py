@@ -7,6 +7,7 @@ def index(request):
     products = Products.objects.all()
 
     context = {
+        'title': 'Assemble Your Team',
         'products': products
     }
 
@@ -15,6 +16,9 @@ def index(request):
 def product(request, product_slug):
     product = Products.objects.get(slug=product_slug)
 
-    context = {"product": product}
+    context = {
+        'title': product.name,
+        "product": product
+    }
 
     return render(request, "main/product.html", context=context)
